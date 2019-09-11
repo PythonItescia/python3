@@ -1,6 +1,6 @@
 import serial
 
-class Arduino():
+class Arduino :
     def __init__(self, port):
         self.ser = serial.Serial(port, baudrate=9600)
         c_recu = self.ser.read(0)

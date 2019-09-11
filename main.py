@@ -1,5 +1,6 @@
 import time
-from Arduino.py import Arduino
+from Arduino import Arduino
+
 port = 'COM6'
 ard = Arduino(port)
 
