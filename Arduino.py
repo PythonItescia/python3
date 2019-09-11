@@ -3,15 +3,15 @@ import serial
 class Arduino :
     def __init__(self, port):
         self.ser = serial.Serial(port, baudrate=9600)
-        c_recu = self.ser.read(0)
+        c_recu = self.ser.read(1)
         while ord(c_recu) != 0:
-            c_recu = self.ser.read(0)
-        c_recu = self.ser.read(0)
+            c_recu = self.ser.read(1)
+        c_recu = self.ser.read(1)
         while ord(c_recu) != 255:
-            c_recu = self.ser.read(0)
-        c_recu = self.ser.read(0)
+            c_recu = self.ser.read(1)
+        c_recu = self.ser.read(1)
         while ord(c_recu) != 0:
-            c_recu = self.ser.read(0)
+            c_recu = self.ser.read(1)
         self.PIN_MODE = 100
         self.DIGITAL_WRITE = 101
         self.DIGITAL_READ = 102

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e2eb015b-51ef-4eea-88c0-2ca6d0c5bc63" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino.py" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568189979759</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Username correction">
+      <created>1568192244736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568192244736</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="correction arduino class call" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction arduino class call" />
+    <MESSAGE value="Username correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Username correction" />
   </component>
 </project>
