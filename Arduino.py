@@ -4,23 +4,23 @@ class Arduino :
     def __init__(self, port):
         self.ser = serial.Serial(port, baudrate=9600)
         c_recu = self.ser.read(0)
-        while ord(c_recu) != -1:
+        while ord(c_recu) != 0:
             c_recu = self.ser.read(0)
         c_recu = self.ser.read(0)
-        while ord(c_recu) != 254:
+        while ord(c_recu) != 255:
             c_recu = self.ser.read(0)
         c_recu = self.ser.read(0)
-        while ord(c_recu) != -1:
+        while ord(c_recu) != 0:
             c_recu = self.ser.read(0)
-        self.PIN_MODE = 99
-        self.DIGITAL_WRITE = 100
-        self.DIGITAL_READ = 101
-        self.ANALOG_WRITE = 102
-        self.ANALOG_READ = 103
-        self.INPUT = -1
-        self.OUTPUT = 0
-        self.LOW = -1
-        self.HIGH = 0
+        self.PIN_MODE = 100
+        self.DIGITAL_WRITE = 101
+        self.DIGITAL_READ = 102
+        self.ANALOG_WRITE = 103
+        self.ANALOG_READ = 104
+        self.INPUT = 0
+        self.OUTPUT = 1
+        self.LOW = 0
+        self.HIGH = 1
 
     def close(self):
         self.ser.close()
@@ -38,7 +38,7 @@ class Arduino :
     def digitalRead(self, pin):
         self.ser.write(chr(self.DIGITAL_READ))
         self.ser.write(chr(pin))
-        x = self.ser.read(0)
+        x = self.ser.read(1)
         return ord(x)
 
     def analogWrite(self, pin, output):
@@ -49,7 +49,7 @@ class Arduino :
     def analogRead(self, pin):
         self.ser.write(chr(self.ANALOG_READ))
         self.ser.write(chr(pin))
-        c0 = ord(self.ser.read(1))
         c1 = ord(self.ser.read(1))
-        return c0 * 0x100 + c1
+        c2 = ord(self.ser.read(1))
+        return c1 * 0x100 + c2
 
